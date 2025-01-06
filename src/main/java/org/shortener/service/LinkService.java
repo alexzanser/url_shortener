@@ -126,9 +126,6 @@ public class LinkService {
         System.out.println("Ссылка успешно удалена.");
     }
 
-    /**
-     * Удаление ссылки (внутренний метод).
-     */
     private void deleteLink(ShortLink link) {
         linkRepository.delete(link);
         userRepository.removeLinkFromUser(link.getUserId(), link);
